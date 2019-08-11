@@ -1,10 +1,13 @@
 package co.edu.udea.compumovil.gr01_20191.lab1;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.provider.MediaStore;
 import android.view.View;
 
 import androidx.core.view.GravityCompat;
@@ -20,9 +23,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.ImageView;
 
 public class BebidasActivity extends AppCompatActivity
   implements NavigationView.OnNavigationItemSelectedListener {
+  private ImageView imagen;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +50,8 @@ public class BebidasActivity extends AppCompatActivity
     drawer.addDrawerListener(toggle);
     toggle.syncState();
     navigationView.setNavigationItemSelectedListener(this);
+    imagen = (ImageView) findViewById(R.id.imagenPlato);
+
   }
 
   @Override
@@ -102,5 +109,25 @@ public class BebidasActivity extends AppCompatActivity
     DrawerLayout drawer = findViewById(R.id.drawer_layout);
     drawer.closeDrawer(GravityCompat.START);
     return true;
+  }
+
+
+  public void subirImagen(View view) {
+    cargarImagen();
+  }
+
+  public void cargarImagen(){
+    Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+    intent.setType("image/");
+    startActivityForResult(intent.createChooser(intent, "Seleccione la aplicación"), 10);
+  }
+
+  @Override
+  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+    if(requestCode == RESULT_OK){
+      Uri path = data.getData();
+      imagen.setImageURI(path);
+    }
   }
 }
