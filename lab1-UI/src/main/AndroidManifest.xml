@@ -12,12 +12,12 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
     <activity
-      android:name=".PlatosActivity"
-      android:label="@string/title_activity_plato"
-      android:theme="@style/AppTheme.NoActionBar"></activity>
-    <activity
       android:name=".BebidasActivity"
       android:label="@string/title_activity_bebidas"
+      android:theme="@style/AppTheme.NoActionBar"></activity>
+    <activity
+      android:name=".PlatosActivity"
+      android:label="@string/title_activity_plato"
       android:theme="@style/AppTheme.NoActionBar" />
     <activity android:name=".MainActivity">
       <intent-filter>

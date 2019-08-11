@@ -7,11 +7,11 @@
     <item
       android:id="@+id/limpiar"
       android:icon="@drawable/ic_arrow_forward"
-      android:title="Limpiar" />
+      android:title="@string/limpiar" />
     <item
       android:id="@+id/salir"
       android:icon="@drawable/ic_menu_signoff"
-      android:title="Salir" />
+      android:title="@string/salir" />
 
   </group>
 

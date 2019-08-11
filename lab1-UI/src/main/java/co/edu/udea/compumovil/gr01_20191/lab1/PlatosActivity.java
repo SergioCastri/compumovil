@@ -31,21 +31,21 @@ import java.util.Calendar;
 
 public class PlatosActivity extends AppCompatActivity
   implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
-  ImageView imagen;
-  Button botonTiempoPreparacion;
-  EditText tiempoPreparacion;
-  EditText nombrePlato;
-  Button btnRegistrar;
-  EditText precio;
-  EditText ingredientes;
-  TextView informacion;
-  RadioGroup platoFuerte;
-  CheckBox noche;
-  CheckBox manana;
-  CheckBox tarde;
-  Uri mUri;
+  private ImageView imagen;
+  private Button botonTiempoPreparacion;
+  private EditText tiempoPreparacion;
+  private EditText nombrePlato;
+  private Button btnRegistrar;
+  private EditText precio;
+  private EditText ingredientes;
+  private TextView informacion;
+  private RadioGroup platoFuerte;
+  private CheckBox noche;
+  private CheckBox manana;
+  private CheckBox tarde;
+  private Uri mUri;
   private int hora, minutos;
-  String info;
+  private String info;
   @Override
     protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -59,8 +59,8 @@ public class PlatosActivity extends AppCompatActivity
     drawer.addDrawerListener(toggle);
     toggle.syncState();
     navigationView.setNavigationItemSelectedListener(this);
-    btnRegistrar = (Button) findViewById(R.id.registrar);
 
+    btnRegistrar = (Button) findViewById(R.id.registrar);
     imagen = (ImageView) findViewById(R.id.imagenPlato);
     botonTiempoPreparacion = (Button) findViewById(R.id.tiempoPreparacion);
     tiempoPreparacion =  (EditText) findViewById(R.id.tiempo);
@@ -174,13 +174,11 @@ public class PlatosActivity extends AppCompatActivity
     editor.putString("Tiempo de preparación", textTiempoPreparacion);
     editor.putString("Precio", textPrecio);
     editor.putString("Ingredientes", textIngredientes);
-    informacion.setText(String.format("%s\n\n%s: %s\n%s: %s\n%s: %s\n%s: %s", labelInformacion, labelNombre, textNombre, labelTiempo, textPrecio, labelIngredientes, textIngredientes, labelPrecio, textTiempoPreparacion));
+    informacion.setText(String.format("%s\n\n%s: %s\n%s: %s\n%s: %s\n%s: %s", labelInformacion, labelNombre, textNombre, labelTiempo, textTiempoPreparacion, labelIngredientes, textIngredientes, labelPrecio, textPrecio));
     String textInformacion= informacion.getText().toString();
 
     editor.putString("Informacion", textInformacion);
     editor.apply();
-
-
   }
 
   @Override
@@ -237,6 +235,4 @@ public class PlatosActivity extends AppCompatActivity
     drawer.closeDrawer(GravityCompat.START);
     return true;
   }
-
-
 }

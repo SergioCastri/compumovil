@@ -8,10 +8,8 @@
   tools:context=".BebidasActivity"
   tools:showIn="@layout/app_bar_bebidas">
 
-
-
   <ImageView
-    android:id="@+id/imagenPlato"
+    android:id="@+id/imagenBebida"
     android:layout_width="139dp"
     android:layout_height="127dp"
     android:layout_marginStart="8dp"
@@ -22,14 +20,14 @@
     android:layout_marginBottom="8dp"
     android:src="@drawable/ic_menu_gallery"
     app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toStartOf="@+id/seleccionarImagen"
-    app:layout_constraintHorizontal_bias="0.528"
+    app:layout_constraintEnd_toStartOf="@+id/seleccionarImagenBebida"
+    app:layout_constraintHorizontal_bias="0.514"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.078" />
+    app:layout_constraintVertical_bias="0.109" />
 
   <Button
-    android:id="@+id/seleccionarImagen"
+    android:id="@+id/seleccionarImagenBebida"
     android:layout_width="167dp"
     android:layout_height="40dp"
     android:layout_marginTop="8dp"
@@ -37,36 +35,37 @@
     android:layout_marginRight="36dp"
     android:layout_marginBottom="8dp"
     android:background="@color/colorAccent"
-    android:text="Seleccionar imagen"
+    android:onClick="subirImagen"
+    android:text="@string/seleccionarImagen"
     android:textColor="#ffff"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.197" />
+    app:layout_constraintVertical_bias="0.224" />
 
   <TextView
-    android:id="@+id/labelGestion"
+    android:id="@+id/labelGestionBebida"
     android:layout_width="160dp"
     android:layout_height="44dp"
     android:layout_marginStart="8dp"
     android:layout_marginLeft="8dp"
-    android:layout_marginTop="8dp"
+    android:layout_marginTop="92dp"
     android:layout_marginEnd="8dp"
     android:layout_marginRight="8dp"
     android:layout_marginBottom="8dp"
-    android:text="Gestionar imagen"
+    android:text="@string/gestionarImagen"
     android:textSize="18dp"
     android:textStyle="bold"
     app:layout_constraintBottom_toTopOf="@+id/seleccionarImagen"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.416"
-    app:layout_constraintStart_toEndOf="@+id/imagenPlato"
+    app:layout_constraintHorizontal_bias="0.326"
+    app:layout_constraintStart_toEndOf="@+id/imagenBebida"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.654" />
+    app:layout_constraintVertical_bias="0.717" />
 
   <TextView
-    android:id="@+id/labelRegistrar"
-    android:layout_width="168dp"
+    android:id="@+id/labelRegistrarBebida"
+    android:layout_width="224dp"
     android:layout_height="35dp"
     android:layout_marginStart="8dp"
     android:layout_marginLeft="8dp"
@@ -74,18 +73,18 @@
     android:layout_marginEnd="8dp"
     android:layout_marginRight="8dp"
     android:layout_marginBottom="8dp"
-    android:text="Registrar plato"
+    android:text="@string/registraBebida"
     android:textSize="24sp"
     android:textStyle="bold"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.533"
+    app:layout_constraintHorizontal_bias="0.673"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.0" />
+    app:layout_constraintVertical_bias="0.011" />
 
   <EditText
-    android:id="@+id/nombrePlato"
+    android:id="@+id/nombreBebida"
     android:layout_width="344dp"
     android:layout_height="47dp"
     android:layout_marginStart="8dp"
@@ -95,170 +94,18 @@
     android:layout_marginRight="8dp"
     android:layout_marginBottom="8dp"
     android:ems="10"
-    android:hint="Nombre del plato"
+    android:hint="@string/nombreDeLaBebida"
     android:inputType="textNoSuggestions|textCapSentences"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.49"
+    app:layout_constraintHorizontal_bias="0.424"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.285" />
-
-  <CheckBox
-    android:id="@+id/checkBoxManana"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="32dp"
-    android:layout_marginLeft="32dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
-    android:text="Mañana"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.376" />
-
-  <CheckBox
-    android:id="@+id/checkBoxNoche"
-    android:layout_width="78dp"
-    android:layout_height="34dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="36dp"
-    android:layout_marginRight="36dp"
-    android:layout_marginBottom="8dp"
-    android:text="Noche"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.378" />
-
-  <CheckBox
-    android:id="@+id/checkBoxTarde"
-    android:layout_width="72dp"
-    android:layout_height="33dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginBottom="8dp"
-    android:text="Tarde"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toStartOf="@+id/checkBoxNoche"
-    app:layout_constraintStart_toEndOf="@+id/checkBoxManana"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.378" />
-
-  <Button
-    android:id="@+id/tiempoPreparacion"
-    android:layout_width="94dp"
-    android:layout_height="39dp"
-    android:layout_marginStart="32dp"
-    android:layout_marginLeft="32dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
-    android:text="Tiempo"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.454" />
-
-  <RadioGroup
-    android:id="@+id/radioGrupo"
-    android:layout_width="349dp"
-    android:layout_height="52dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginBottom="288dp"
-    android:orientation="horizontal"
-    android:weightSum="1"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="@+id/labelRegistrar"
-    app:layout_constraintVertical_bias="0.933">
-
-    <RadioButton
-      android:id="@+id/radioButtonPlatoFuerte"
-      android:layout_width="160dp"
-      android:layout_height="32dp"
-      android:layout_marginTop="8dp"
-      android:layout_marginEnd="36dp"
-      android:layout_marginRight="36dp"
-      android:layout_marginBottom="8dp"
-      android:text="Plato Fuerte"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/checkBoxTarde"
-      app:layout_constraintVertical_bias="0.035" />
-
-    <RadioButton
-      android:id="@+id/radioButtonEntrada"
-      android:layout_width="134dp"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="8dp"
-      android:layout_marginLeft="8dp"
-      android:layout_marginTop="8dp"
-      android:layout_marginEnd="8dp"
-      android:layout_marginRight="8dp"
-      android:layout_marginBottom="8dp"
-      android:text="Entrada"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toStartOf="@+id/radioButtonPlatoFuerte"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/checkBoxTarde"
-      app:layout_constraintVertical_bias="0.226" />
-  </RadioGroup>
+    app:layout_constraintVertical_bias="0.334" />
 
   <EditText
-    android:id="@+id/tiempo"
-    android:layout_width="232dp"
-    android:layout_height="42dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginBottom="8dp"
-    android:ems="10"
-    android:enabled="false"
-    android:hint="Tiempo de preparación"
-    android:inputType="textNoSuggestions|textCapSentences"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.333"
-    app:layout_constraintStart_toEndOf="@+id/tiempoPreparacion"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.456" />
-
-  <EditText
-    android:id="@+id/ingredientes"
-    android:layout_width="221dp"
-    android:layout_height="40dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginBottom="8dp"
-    android:ems="10"
-    android:hint="Ingredientes"
-    android:inputType="textNoSuggestions|textCapSentences"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.85"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.623" />
-
-  <EditText
-    android:id="@+id/precio"
+    android:id="@+id/precioBebida"
     android:layout_width="108dp"
     android:layout_height="40dp"
     android:layout_marginStart="8dp"
@@ -268,17 +115,37 @@
     android:layout_marginRight="8dp"
     android:layout_marginBottom="8dp"
     android:ems="10"
-    android:hint="Precio"
+    android:hint="@string/precio"
     android:inputType="textNoSuggestions|phone"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.08"
+    app:layout_constraintHorizontal_bias="0.052"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.623" />
+    app:layout_constraintVertical_bias="0.438" />
+
+  <EditText
+    android:id="@+id/ingredientesBebida"
+    android:layout_width="221dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:ems="10"
+    android:hint="@string/ingredientes"
+    android:inputType="textNoSuggestions|textCapSentences"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.878"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.438" />
 
   <Button
-    android:id="@+id/registrar"
+    android:id="@+id/registrarBebida"
     android:layout_width="112dp"
     android:layout_height="37dp"
     android:layout_marginStart="8dp"
@@ -288,19 +155,20 @@
     android:layout_marginRight="8dp"
     android:layout_marginBottom="8dp"
     android:background="@color/colorAccent"
-    android:text="Registrar"
+    android:onClick="registrarBebida"
+    android:text="@string/registrar"
     android:textColor="#ffff"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.491"
+    app:layout_constraintHorizontal_bias="0.46"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="@+id/labelRegistrar"
-    app:layout_constraintVertical_bias="0.697" />
+    app:layout_constraintTop_toTopOf="@+id/labelRegistrarBebida"
+    app:layout_constraintVertical_bias="0.541" />
 
   <TextView
-    android:id="@+id/informacion"
-    android:layout_width="338dp"
-    android:layout_height="164dp"
+    android:id="@+id/informacionBebida"
+    android:layout_width="341dp"
+    android:layout_height="260dp"
     android:layout_marginStart="8dp"
     android:layout_marginLeft="8dp"
     android:layout_marginTop="8dp"
