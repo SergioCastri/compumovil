@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/startingView"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   tools:context=".PlatosActivity"
@@ -20,18 +21,18 @@
     android:src="@drawable/ic_menu_gallery"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toStartOf="@+id/seleccionarImagen"
-    app:layout_constraintHorizontal_bias="0.557"
+    app:layout_constraintHorizontal_bias="0.528"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.013" />
+    app:layout_constraintVertical_bias="0.078" />
 
   <Button
     android:id="@+id/seleccionarImagen"
     android:layout_width="167dp"
     android:layout_height="40dp"
     android:layout_marginTop="8dp"
-    android:layout_marginEnd="32dp"
-    android:layout_marginRight="32dp"
+    android:layout_marginEnd="36dp"
+    android:layout_marginRight="36dp"
     android:layout_marginBottom="8dp"
     android:background="@color/colorAccent"
     android:onClick="subirImagen"
@@ -40,7 +41,7 @@
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.127" />
+    app:layout_constraintVertical_bias="0.197" />
 
   <TextView
     android:id="@+id/labelGestion"
@@ -57,9 +58,265 @@
     android:textStyle="bold"
     app:layout_constraintBottom_toTopOf="@+id/seleccionarImagen"
     app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.416"
     app:layout_constraintStart_toEndOf="@+id/imagenPlato"
-    app:layout_constraintTop_toTopOf="parent" />
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.654" />
 
+  <TextView
+    android:id="@+id/labelRegistrar"
+    android:layout_width="168dp"
+    android:layout_height="35dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:text="Registrar plato"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.533"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0" />
+
+  <EditText
+    android:id="@+id/nombrePlato"
+    android:layout_width="344dp"
+    android:layout_height="47dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:ems="10"
+    android:hint="Nombre del plato"
+    android:inputType="textNoSuggestions|textCapSentences"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.49"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.285" />
+
+  <CheckBox
+    android:id="@+id/checkBoxManana"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="32dp"
+    android:layout_marginLeft="32dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:text="Mañana"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.376" />
+
+  <CheckBox
+    android:id="@+id/checkBoxNoche"
+    android:layout_width="78dp"
+    android:layout_height="34dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="36dp"
+    android:layout_marginRight="36dp"
+    android:layout_marginBottom="8dp"
+    android:text="Noche"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.378" />
+
+  <CheckBox
+    android:id="@+id/checkBoxTarde"
+    android:layout_width="72dp"
+    android:layout_height="33dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:text="Tarde"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/checkBoxNoche"
+    app:layout_constraintStart_toEndOf="@+id/checkBoxManana"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.378" />
+
+
+  <Button
+    android:id="@+id/tiempoPreparacion"
+    android:layout_width="94dp"
+    android:layout_height="39dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginLeft="32dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:text="Tiempo"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.454" />
+
+  <RadioGroup
+    android:id="@+id/radioGrupo"
+    android:layout_width="349dp"
+    android:layout_height="52dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="288dp"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/labelRegistrar"
+    app:layout_constraintVertical_bias="0.933">
+
+    <RadioButton
+      android:id="@+id/radioButtonPlatoFuerte"
+      android:layout_width="160dp"
+      android:layout_height="32dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="36dp"
+      android:layout_marginRight="36dp"
+      android:layout_marginBottom="8dp"
+      android:text="Plato Fuerte"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/checkBoxTarde"
+      app:layout_constraintVertical_bias="0.035" />
+
+    <RadioButton
+      android:id="@+id/radioButtonEntrada"
+      android:layout_width="134dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginRight="8dp"
+      android:layout_marginBottom="8dp"
+      android:text="Entrada"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/radioButtonPlatoFuerte"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/checkBoxTarde"
+      app:layout_constraintVertical_bias="0.226" />
+  </RadioGroup>
+
+  <EditText
+    android:id="@+id/tiempo"
+    android:layout_width="232dp"
+    android:layout_height="42dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:ems="10"
+    android:enabled="false"
+    android:hint="Tiempo de preparación"
+    android:inputType="textNoSuggestions|textCapSentences"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.333"
+    app:layout_constraintStart_toEndOf="@+id/tiempoPreparacion"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.456" />
+
+  <EditText
+    android:id="@+id/ingredientes"
+    android:layout_width="221dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:ems="10"
+    android:hint="Ingredientes"
+    android:inputType="textNoSuggestions|textCapSentences"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.85"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.623" />
+
+  <EditText
+    android:id="@+id/precio"
+    android:layout_width="108dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:ems="10"
+    android:hint="Precio"
+    android:inputType="textNoSuggestions|phone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.08"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.623" />
+
+  <Button
+    android:id="@+id/registrar"
+    android:layout_width="112dp"
+    android:layout_height="37dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@color/colorAccent"
+    android:text="Registrar"
+    android:onClick="registrar"
+    android:textColor="#ffff"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.491"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/labelRegistrar"
+    app:layout_constraintVertical_bias="0.697" />
+
+  <TextView
+    android:id="@+id/informacion"
+    android:layout_width="338dp"
+    android:layout_height="164dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:text=""
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.508"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.969" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
