@@ -15,4 +15,29 @@
   <string name="menu_share">Share</string>
   <string name="menu_send">Send</string>
   <string name="title_activity_bebidas">BebidasActivity</string>
+  <string name="title_activity_navegation">activityNavegation</string>
+  <string name="title_activity_plato">PlatosActivity</string>
+
+  <string name="seleccionarImagen" size="12">Seleccionar imagen</string>
+  <string name="gestionarImagen">Gestionar Imagen</string>
+  <string name="registrarPlato">Resgistar plato</string>
+  <string name="manana">Mañana</string>
+  <string name="tarde">Tarde</string>
+  <string name="noche">Noche</string>
+  <string name="tiempo">Tiempo</string>
+  <string name="platoFuerte">Plato fuerte</string>
+  <string name="entrada">Entrada</string>
+  <string name="registrar">Registrar</string>
+  <string name="nombreDelPlato">Nombre del plato</string>
+  <string name="tiempoDePreparacion">Tiempo de preparación</string>
+  <string name="precio">Precio</string>
+  <string name="ingredientes">Ingredientes</string>
+  <string name="informacionGeneral"  size="12">Información general</string>
+
+
+
+
+
+
+
 </resources>

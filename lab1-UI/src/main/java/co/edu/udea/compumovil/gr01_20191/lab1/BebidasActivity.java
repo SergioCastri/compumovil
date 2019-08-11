@@ -35,14 +35,7 @@ public class BebidasActivity extends AppCompatActivity
     setContentView(R.layout.activity_bebidas);
     Toolbar toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
-    FloatingActionButton fab = findViewById(R.id.fab);
-    fab.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-          .setAction("Action", null).show();
-      }
-    });
+
     DrawerLayout drawer = findViewById(R.id.drawer_layout);
     NavigationView navigationView = findViewById(R.id.nav_view);
     ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -79,9 +72,7 @@ public class BebidasActivity extends AppCompatActivity
     int id = item.getItemId();
 
     //noinspection SimplifiableIfStatement
-    if (id == R.id.action_settings) {
-      return true;
-    }
+
 
     return super.onOptionsItemSelected(item);
   }
@@ -111,23 +102,4 @@ public class BebidasActivity extends AppCompatActivity
     return true;
   }
 
-
-  public void subirImagen(View view) {
-    cargarImagen();
-  }
-
-  public void cargarImagen(){
-    Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-    intent.setType("image/");
-    startActivityForResult(intent.createChooser(intent, "Seleccione la aplicación"), 10);
-  }
-
-  @Override
-  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-    super.onActivityResult(requestCode, resultCode, data);
-    if(requestCode == RESULT_OK){
-      Uri path = data.getData();
-      imagen.setImageURI(path);
-    }
-  }
 }
