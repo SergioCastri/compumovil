@@ -116,7 +116,7 @@ public class PlatosActivity extends AppCompatActivity
   public void cargarImagen(){
     Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
     intent.setType("image/");
-    startActivityForResult(intent.createChooser(intent, "Seleccione la aplicación"), 10);
+    startActivityForResult(intent.createChooser(intent, getString(R.string.seleccioneApp)), 10);
   }
 
   @Override
@@ -140,14 +140,15 @@ public class PlatosActivity extends AppCompatActivity
       public void onTimeSet(TimePicker timePicker, int horaDia, int minutosdia) {
         String tiempoHoras, tiempoMinutos;
         if(horaDia == 1){
-          tiempoHoras = " Hora y ";
+          tiempoHoras =  getString(R.string.hora);
+
         }else {
-          tiempoHoras = " Horas y ";
+          tiempoHoras = getString(R.string.horas);
         }
         if(minutosdia == 1){
-          tiempoMinutos = " Minuto ";
+          tiempoMinutos = getString(R.string.minuto);
         }else {
-          tiempoMinutos = " Minutos ";
+          tiempoMinutos = getString(R.string.minutos);
         }
         tiempoPreparacion.setText(horaDia + tiempoHoras + minutosdia + tiempoMinutos);
       }

@@ -42,5 +42,12 @@
   <string name="nav_header_desc">Cabecera de navegacion</string>
   <string name="navigation_drawer_open">Abrir navegación</string>
 
+  <string name="seleccioneApp" size="12">Seleccione la aplicación</string>
+  <string name="hora" size="12"> Hora y </string>
+  <string name="horas" size="12"> Horas y </string>
+  <string name="minuto" size="12"> Minuto </string>
+  <string name="minutos" size="12"> Minutos </string>
+
+
 
 </resources>

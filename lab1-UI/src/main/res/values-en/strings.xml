@@ -36,4 +36,9 @@
   <string name="tiempoDePreparacion">Preparation time</string>
   <string name="title_activity_bebidas">Drinks</string>
   <string name="title_activity_navegation">Navegation</string>
+  <string name="hora">" Hour and "</string>
+  <string name="horas">" Hours and "</string>
+  <string name="minuto">" Minute "</string>
+  <string name="seleccioneApp">Select the App</string>
+  <string name="minutos">" Minutes "</string>
 </resources>
