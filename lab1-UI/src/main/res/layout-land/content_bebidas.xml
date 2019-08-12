@@ -56,7 +56,7 @@
       android:text="@string/gestionarImagen"
       android:textSize="18dp"
       android:textStyle="bold"
-      app:layout_constraintBottom_toTopOf="@+id/seleccionarImagen"
+      app:layout_constraintBottom_toTopOf="@+id/seleccionarImagenBebida"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.052"
       app:layout_constraintStart_toEndOf="@+id/imagenBebida"
